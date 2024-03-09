@@ -16,35 +16,35 @@
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center elements horizontally */
   margin-top: 20px; /* Add some top margin */
-  width: 80%; /* Adjust width as needed */
+  width: 50%; /* Adjust width as needed */
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  height:150px;
+  height:250px;
   
 }
 
 .card-view {
   /* Styles for the flashcard itself */
   background-color: #635e5e;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  
+  
   padding: 20px;
   width: 100%; /* Take full width inside the container */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Add some bottom margin */
-  height:120px;
+  padding-top: 50px;
+
+  
+  height:270px;
   
   
 }
+.container:hover{
+  cursor:pointer;
+  transform: scale(1.0);
+}
 
-
-
-
-
-.container {
-  margin-top: 50px;
-  display: flex;
+.container:active{
+  transform: scale(0.95);
 }
 
 .button-container{
@@ -64,4 +64,6 @@ button {
   line-height: 0.5;
   height:35px;
 }
+
+
 

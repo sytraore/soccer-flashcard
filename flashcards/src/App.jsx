@@ -26,7 +26,7 @@ const App = () => {
       <div className="header">
         <h1>Soccer Knowlege</h1>
         <h2>Are you a soccer fan? Test your knowledge and learn more about soccer here!</h2>
-        <h3>Number of cards: 10</h3>
+        <h3>Number of cards: 5</h3>
       </div>
 
       <div className="container">
