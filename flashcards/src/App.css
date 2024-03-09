@@ -5,7 +5,54 @@
   text-align: center;
 }
 
-.display-card{
+.App{
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  font-family: sans-serif; /* Set a default font */
+}
+.container{
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  margin-top: 20px; /* Add some top margin */
+  width: 80%; /* Adjust width as needed */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  height:150px;
+  
+}
+
+.card-view {
+  /* Styles for the flashcard itself */
+  background-color: #635e5e;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%; /* Take full width inside the container */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add some bottom margin */
+  height:120px;
+  
+  
+}
+
+
+
+
+
+.container {
+  margin-top: 50px;
+  display: flex;
+}
+
+.button-container{
+  display:flex;
+  justify-content: space-between;
+}
+
+button {
   border: 1px solid rgba(25, 23, 23, 0.497);
   border-radius: 0 ;
   padding-top: 20px;
@@ -13,8 +60,8 @@
   padding-right: 10px;
   padding-bottom: 20px;
   margin-right: 25px;
-  width: 200px;
+  width: 100px;
   line-height: 0.5;
+  height:35px;
 }
-
 

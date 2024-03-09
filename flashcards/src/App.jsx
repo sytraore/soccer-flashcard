@@ -1,28 +1,25 @@
 import { useState } from 'react'
 import './App.css'
+import Card from './components/Card'
 
 const App = () => {
-  const cards = [
-    {question:'What team has won the most UEFA Champions League?', answer:"Real Madrid"},
-    {question:'Who is the greatest goal scorer of all time?', answer:'Cristiano Ronaldo'},
-    {question:'What is the biggest amount of money spent one transfert and which player was it?', answer:'$220 millions and it was spent for Neymar'}
-  ];
-
-  const [currentCard, setCurrentCard] = useState(0);
-  const [isAnswerShown, setIsAnswerShown] = usestate(false);
-
-  const handleCardClick = () => {
-    setIsAnswerShown(!isAnswerShown);
-  };
+  const questions = [
+    {question:"What team has won the most UEFA Champions League?", answer: "Real Madrid"},
+    {question:"Which country has won the most World Cup?", answer: "Brazil"},
+    {question:"Who is the greatest goal scorer of all time", answer: "Cristiano Ronaldo"},
+    {question:"Who won the most Ballon d'Or?", answer: "Lionel Messi"},
+    {question:"Who hold the record of the most expensive player of all time?", answer: "Neymar Jr."},
+  ]
+  
+  const [currentCard, setCurrentCard] = useState(0)
 
   const handleNextClick = () => {
-    const newIndex = (currentCard + 1) % cards.length;
-    setCurrentCard(newIndex);
-    setIsAnswerShown(false); // Hide answer when showing a new card
-  };
-
-  const showCard = cards[currentCard];
+    setCurrentCard((index) => (index+1) % questions.length)
+  }
   
+  const handlePrevClick =() => {
+    setCurrentCard((index) => (index - 1 + questions.length) % questions.length)
+  }
   return(
     <div className="App">
 
@@ -32,15 +29,18 @@ const App = () => {
         <h3>Number of cards: 10</h3>
       </div>
 
-      <div classname="display-card">
-        <h2>{showCard.question}</h2>
-        {isAnswerShown && <p>{showCard.answer}</p>}
-        <button onClick={handleCardClick}>
-          {isAnswerShown ? 'Hide Answer' : 'Show Answer'}
-        </button>
+      <div className="container">
+        <div className = "card-view">
+        <Card question={questions[currentCard].question} answer={questions[currentCard].answer} />
+        </div>
 
-        <button onClick={handleNextClick}>Next Card</button>
+
       </div>
+      <div className = "button-container">
+          <button onClick={handlePrevClick}>Previous</button>
+          <button onClick={handleNextClick}>Next</button>
+      </div>
+        
 
     </div>
   )
