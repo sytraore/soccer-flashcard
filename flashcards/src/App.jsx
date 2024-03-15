@@ -31,8 +31,10 @@ const App = () => {
 
       <div className="container">
         <div className = "card-view">
-        <Card question={questions[currentCard].question} answer={questions[currentCard].answer} />
+          
+          <Card question={questions[currentCard].question} answer={questions[currentCard].answer} />
         </div>
+        
 
 
       </div>

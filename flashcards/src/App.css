@@ -17,35 +17,35 @@
   align-items: center; /* Center elements horizontally */
   margin-top: 20px; /* Add some top margin */
   width: 50%; /* Adjust width as needed */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
+  
+  
+  
   height:250px;
   
 }
 
 .card-view {
   /* Styles for the flashcard itself */
-  background-color: #635e5e;
-  
-  
+  background-color: #d2cbcb;
   padding: 20px;
   width: 100%; /* Take full width inside the container */
   padding-top: 50px;
-
-  
+  border: 5px #d2cbcb;
+  border-radius: 5px;
   height:270px;
   
   
 }
-.container:hover{
+.card-view:hover{
   cursor:pointer;
   transform: scale(1.0);
 }
 
-.container:active{
+.card-view:active{
   transform: scale(0.95);
 }
+
+
 
 .button-container{
   display:flex;
@@ -53,8 +53,8 @@
 }
 
 button {
-  border: 1px solid rgba(25, 23, 23, 0.497);
-  border-radius: 0 ;
+  border: 1px solid rgba(247, 8, 12, 0.913);
+  border-radius: 5px ;
   padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -63,6 +63,7 @@ button {
   width: 100px;
   line-height: 0.5;
   height:35px;
+  
 }
 
 
