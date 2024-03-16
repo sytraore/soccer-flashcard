@@ -36,6 +36,15 @@
   
   
 }
+
+#wrong {
+  background-color:rgb(228, 18, 18);
+}
+
+#correct {
+  background-color:rgb(21, 194, 30);
+}
+
 .card-view:hover{
   cursor:pointer;
   transform: scale(1.0);

@@ -5,21 +5,18 @@ import React from "react";
 
 
 
-const Card=({question, answer}) => {
-    const [isQuestion, swipeToAnswer] = useState(true);
-
-    const handleSwipe = () => {
-        swipeToAnswer(previous => !previous)
-    }
-
-    const content = isQuestion ? question : answer;
-    const sideClass = isQuestion ? "front" : "back";
-    const classList = `flashcard ${sideClass}`
+const Card=({question, answer, isCorrectAnswer, feedback, inputs}) => {
+   
+    const [isSwipeEnabled, setIsSwipeEnabled] = useState(true);
+    
+    const isCorrect = inputs.toLowerCase() === answer.toLowerCase();
+    const feedbackClass = feedback === null ? '' : feedback ? 'correct' : 'incorrect';
+    
 
     return(
-        <div className={classList} onClick={handleSwipe}>
+        <div className={`flashcard ${isCorrectAnswer ? 'back' : 'front'}` } >
             <div className="content">
-                <span className = "textContent">{content}</span>
+                <span className = {`textContent ${feedbackClass}`}>{isCorrectAnswer ? answer : question}</span>
             </div>
 
         </div>
