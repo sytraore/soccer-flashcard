@@ -1,6 +1,3 @@
-# web102-project-2
- 
- Submitted by: **Sy Traore**
 
 This web app: **tests the user knowledge on soccer by asking questions and providing answers.**
 
@@ -32,9 +29,7 @@ GIF created with ...
 [Kap](https://getkap.co/) for macOS
 
 
-## Notes
 
-Describe any challenges encountered while building the app.
 
 ## License
 
